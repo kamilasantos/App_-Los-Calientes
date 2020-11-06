@@ -1,0 +1,47 @@
+<ion-header no-margin>
+    <ion-navbar color="primary">
+        <ion-buttons left>
+            <button ion-button icon-only (tap)="close()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>{{user.name}} {{user.surname}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list-header>
+        Accepted
+    </ion-list-header>
+    <ion-list class="accepeted">
+        <ion-item-sliding>
+            <button ion-item>
+            <h2>{{this.user.casesAccepted}} cases</h2>
+            </button>
+        </ion-item-sliding>
+    </ion-list>
+    <ion-list-header>
+        Declined
+    </ion-list-header>
+    <ion-list>
+        <ion-list>
+            <ion-item-sliding>
+                <button ion-item>
+                <h2>{{this.user.casesDeclined}} cases</h2>
+                </button>
+            </ion-item-sliding>
+        </ion-list>
+    </ion-list>
+    <ion-list-header>
+        Concluded
+    </ion-list-header>
+    <ion-list>
+        <ion-list>
+            <ion-item-sliding>
+                <button ion-item>
+                <h2>{{this.user.casesConcluded}} cases</h2>
+                </button>
+            </ion-item-sliding>
+        </ion-list>
+    </ion-list>
+</ion-content>

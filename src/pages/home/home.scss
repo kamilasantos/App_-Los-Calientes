@@ -1,0 +1,39 @@
+page-home {
+    #mapa {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+
+	ion-segment {
+		background-color: color($colors, primary);
+		height: 18vh;
+	}
+
+	ion-avatar {
+		width: 33vw;
+	}
+
+	.firstRecommend {
+		height: 8vh;
+		margin-top: 2vh;
+		margin-left: 11vw;
+	}
+
+	.secondRecommend {
+		height: 8vh;
+		margin-top: 2vh;
+		margin-left: 11vw;
+	}
+
+	.thirdRecommend {
+		height: 8vh;
+		margin-top: 2vh;
+		margin-left: 11vw;
+	}
+
+	p {
+		color: color($colors, secondary);
+		font-weight: bolder;
+	}
+}

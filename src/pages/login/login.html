@@ -1,0 +1,38 @@
+<ion-content padding-top class="background">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            LOGIN
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list no-lines>
+              <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="email" [(ngModel)]="user[0].email" autocomplete></ion-input>
+              </ion-item>
+              <ion-item class="itemPasswordButton">
+                <ion-label floating>Senha</ion-label>
+                <ion-input type="{{viewPassword}}" [(ngModel)]="user[0].password"></ion-input>
+              </ion-item>
+              <button ion-button item-end clear menuClose class="inputPasswordButton" (tap)="changeViewPassword()">
+                <ion-icon name="eye" color="secondary"></ion-icon>
+              </button>
+              <ion-item>
+                <p text-center go-page="reset-password">Esqueceu sua senha? <a>Redefina</a></p>
+              </ion-item>
+              <button ion-button block [disabled]="(!user[0].email || !user[0].password)" (tap)="login(user[0].email,user[0].password)"
+                go-root="true">login</button>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button clear color="light" go-page="register">Não tem conta? Cadastre-se</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

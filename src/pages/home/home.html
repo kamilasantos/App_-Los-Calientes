@@ -1,0 +1,34 @@
+<ion-header no-margin>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{user?.name}} {{user?.surname}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!--<ion-segment color="secondary" *ngIf="!loading">
+        <ion-avatar text-center>
+            <img src="assets/imgs/lawyerAvatar.png" class="firstRecommend">
+            <p>John<br>10 m</p>
+        </ion-avatar>
+        <ion-avatar text-center>
+            <img src="assets/imgs/lawyerAvatar.png" class="secondRecommend">
+            <p>Carl<br>44m</p>
+        </ion-avatar>
+        <ion-avatar text-center>
+            <img src="assets/imgs/lawyerAvatar.png" class="thirdRecommend">
+            <p>Josef<br>55m</p>
+        </ion-avatar>
+    </ion-segment>-->
+    <loading-circle *ngIf="loading"></loading-circle>
+    <loading-svg *ngIf="loading"></loading-svg>
+    <div id="mapa"></div>
+    <ion-fab bottom left>
+        <button ion-fab (tap)="centerMap()"><ion-icon name="locate"></ion-icon></button>
+    </ion-fab>
+    <ion-fab bottom right>
+        <button ion-fab (tap)="search()"><ion-icon name="search"></ion-icon></button>
+    </ion-fab>
+</ion-content>

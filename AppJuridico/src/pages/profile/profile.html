@@ -1,0 +1,32 @@
+<ion-header no-margin>
+    <ion-navbar color="primary">
+        <ion-title>{{user?.name}} {{user?.surname}}</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (tap)="close()">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding-top class="background">
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <ion-card-header text-center>
+                {{user?.name}} {{user?.surname}}
+              </ion-card-header>
+              <ion-card-content>
+                <img src="{{user?.img || 'assets/imgs/user.png'}}" class="img" (tap)="choosePicture()">
+                <ion-row>
+                    Tel: {{user?.tel}}<br><br>
+                    Email: {{user?.email}} <br><br>
+                    Description: {{user?.description}}
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

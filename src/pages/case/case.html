@@ -1,0 +1,36 @@
+<ion-header no-margin>
+    <ion-navbar color="primary">
+        <ion-title>{{user?.name}} {{user?.surname}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding-top class="background">
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <ion-card-content>
+                <img src="{{sender?.img}}" class="img">
+                <ion-row>
+                    <ion-col>
+                        <p>Name: {{sender.name}}</p>
+                    </ion-col>
+                    <ion-col>
+                        <p>Tel: {{sender.tel}}</p>
+                    </ion-col>
+                </ion-row>  
+                <p>{{case}}</p>
+                <ion-row>
+                    <ion-col>
+                        <button ion-button block color="vermelhoEscuro" (tap)="decline()">Decline</button>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button block (tap)="agree()">Accept</button>
+                    </ion-col>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

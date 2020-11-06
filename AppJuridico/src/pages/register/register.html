@@ -1,0 +1,67 @@
+<ion-content padding-top class="background">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            REGISTER
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list no-lines>
+              <ion-item>
+                <ion-label floating>Name</ion-label>
+                <ion-input type="text" [(ngModel)]="user[0].name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Surname</ion-label>
+                <ion-input type="text" [(ngModel)]="user[0].surname"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Tel</ion-label>
+                <ion-input type="text" [(ngModel)]="user[0].tel"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Lawyer</ion-label>
+                <ion-toggle [(ngModel)]="user[0].lawyer"></ion-toggle>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>E-mail</ion-label>
+                <ion-input type="email" [(ngModel)]="user[0].email"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password" [(ngModel)]="user[0].password1"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Confirm Password</ion-label>
+                <ion-input type="password" [(ngModel)]="user[0].password2"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-textarea [(ngModel)]="user[0].description"></ion-textarea>
+              </ion-item>
+              <ion-item *ngIf="user[0].lawyer == true">
+                <ion-segment [(ngModel)]="user[0].category" color="secondary">
+                  <ion-segment-button value="criminal">
+                    Criminal
+                  </ion-segment-button>
+                  <ion-segment-button value="civil">
+                    Civil
+                  </ion-segment-button>
+                  <ion-segment-button value="labor">
+                    Labor
+                  </ion-segment-button>
+                </ion-segment>
+              </ion-item>    
+              <ion-item *ngIf="user[0].lawyer == true">
+                <ion-label floating>Price</ion-label>
+                <ion-input type="number" [(ngModel)]="user[0].price"></ion-input>
+              </ion-item>
+              <button ion-button block [disabled]="!user[0].name || !user[0].surname || !user[0].tel || !user[0].email || !user[0].password1 || !user[0].password2 || !user[0].description" (tap)="register()">REGISTER</button>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

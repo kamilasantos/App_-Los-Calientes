@@ -1,0 +1,27 @@
+page-login {
+    .scroll-content {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+    }
+
+    p {
+        color: white !important;
+    }
+
+    a {
+        color: color($colors, secondary);
+    }
+
+    .itemPasswordButton {
+        display: inline-block;
+        width: 85%;
+    }
+
+    .inputPasswordButton {
+      display: inline-block;
+      margin-bottom: 13%;
+      text-align: right;
+      width: 10%;
+    }
+}

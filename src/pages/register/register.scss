@@ -1,0 +1,35 @@
+page-register {
+
+    .scroll-content {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+    }
+
+    ion-card.card {
+        margin-top: 0%;
+    }
+
+    ion-card-header {
+        color: white !important;
+    }
+
+    ion-input.input {
+        color: white;
+    }
+
+    ion-textarea.input {
+        color: white;
+    }
+
+    p {
+        color: white !important;
+    }
+
+    .item {
+        background: rgba(232, 230, 230, 0px);
+        .label {
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "juridicDemo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

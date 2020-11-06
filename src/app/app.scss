@@ -1,0 +1,129 @@
+ion-fab[bottom] {
+    bottom: 12%;
+}
+
+.input-cover {
+    position: static;
+}
+
+.spinner-crescent circle {
+    stroke: color($colors, primary) !important;
+}
+
+::-webkit-input-placeholder {
+color: color($colors, primary) !important;
+}
+
+ion-toast.error .toast-wrapper {
+    background: color($colors, vermelhoEscuro);
+}
+
+ion-toast.success .toast-wrapper {
+    background: #71D3A0;
+}
+
+.item {
+    border-bottom: 1px solid color($colors, primary);
+}
+
+.item.header {
+    border-top: 1px solid color($colors, primary);
+    text-align: center;
+}
+
+.line-text {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.35);
+	margin: 8px 0px;
+
+    &:before, &:after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 8px;
+    }
+}
+
+.app-header {
+    padding-bottom: 30px;
+    background-color: color($colors, primary) !important;
+    background-size: cover;
+
+    .toolbar-title {
+        color: white;
+    }
+}
+
+.app-content {
+    margin-top: 5%;
+    background-color: color($colors, primary);
+
+    button {
+        color: white;
+        background-color: transparent;
+    }
+}
+
+.img-circle {
+    margin-top: 5%;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/imgs/fundoLogin.jpeg);
+    background-size: cover;
+}
+
+ion-card.card {
+    margin-top: 12vh;
+    background: rgba(0, 0, 0, 0.685);
+    border-radius: 10px;
+    color: white;
+}
+
+ion-card-header {
+    color: white !important;
+}
+
+ion-segment {
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+ion-input.input {
+    border-bottom: 1px solid color($colors, secondary);
+    color: white;
+}
+
+.item {
+    background: rgba(232, 230, 230, 0px);
+    .label {
+        color: white;
+    }
+}
+
+ion-toast.success .toast-wrapper {
+    background: color($colors, primary);
+}
+
+.activeHighLight {
+    border-left: 3px solid color($colors, light) !important;
+    background-color: color($colors, secondary) !important;
+}
+
+.line {
+    border-width: 3px;
+    max-width: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid color($colors, secondary);
+}
